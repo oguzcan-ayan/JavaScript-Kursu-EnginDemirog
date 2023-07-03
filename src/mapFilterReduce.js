@@ -15,6 +15,11 @@ cart.map(product => {
 })
 console.log("</ul>")
 
+let quantityOver2 = cart.filter(product => product.quantity > 2)
+console.log(quantityOver2)
+
+let total = cart.reduce((acc, product) => acc + product.unitPrice * product.quantity, 0)
+console.log(total)
 //Single Page Application(SPA) : View, React ve Angular ile geliştirdiğimiz uygulamalar
 
 //cart.push({id : 7, productName : "Headset", quantity : 6, unitPrice : 300})
